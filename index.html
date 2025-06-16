@@ -8,29 +8,31 @@
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
-      background: #f5f5f5;
+      background: #f4f4f4;
     }
     h1 {
       text-align: center;
+      margin-bottom: 30px;
     }
     .item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 15px;
-      padding: 10px;
+      margin-bottom: 12px;
+      padding: 10px 15px;
       background: white;
       border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     label {
       flex: 1;
+      font-size: 15px;
     }
     .switch {
       position: relative;
       display: inline-block;
-      width: 50px;
-      height: 25px;
+      width: 40px;
+      height: 22px;
     }
     .switch input {
       opacity: 0;
@@ -41,14 +43,15 @@
       position: absolute;
       cursor: pointer;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: #4CAF50;
+      background-color: #f44336;
       transition: .4s;
       border-radius: 34px;
     }
     .slider:before {
       position: absolute;
       content: "";
-      height: 19px; width: 19px;
+      height: 16px;
+      width: 16px;
       left: 3px;
       bottom: 3px;
       background-color: white;
@@ -56,10 +59,10 @@
       border-radius: 50%;
     }
     input:checked + .slider {
-      background-color: #f44336;
+      background-color: #4CAF50;
     }
     input:checked + .slider:before {
-      transform: translateX(24px);
+      transform: translateX(18px);
     }
     textarea {
       width: 100%;
@@ -87,34 +90,47 @@
   <h1>Checklist Mecánico Diario</h1>
 
   <form id="checklist-form">
-    <div class="item">
-      <label for="fugasGas">Fugas de Gas</label>
-      <label class="switch">
-        <input type="checkbox" id="fugasGas" name="fugasGas">
-        <span class="slider"></span>
-      </label>
-    </div>
 
-    <div class="item">
-      <label for="fugasAceite">Fugas de Aceite</label>
-      <label class="switch">
-        <input type="checkbox" id="fugasAceite" name="fugasAceite">
-        <span class="slider"></span>
-      </label>
-    </div>
-
-    <div class="item">
-      <label for="mangueras">Mangueras y Abrazaderas del Tanque de Gas</label>
-      <label class="switch">
-        <input type="checkbox" id="mangueras" name="mangueras">
-        <span class="slider"></span>
-      </label>
-    </div>
+    <!-- INICIA CHECKLIST -->
+    <div class="item"><label>Fugas de Gas</label><label class="switch"><input type="checkbox" checked name="fugasGas"><span class="slider"></span></label></div>
+    <div class="item"><label>Fugas de Aceite</label><label class="switch"><input type="checkbox" checked name="fugasAceite"><span class="slider"></span></label></div>
+    <div class="item"><label>Mangueras y Abrazaderas del Tanque de Gas</label><label class="switch"><input type="checkbox" checked name="mangueras"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de la llave de Máximo Llenado</label><label class="switch"><input type="checkbox" checked name="llave"><span class="slider"></span></label></div>
+    <div class="item"><label>Nivel del Anticongelante</label><label class="switch"><input type="checkbox" checked name="anticongelante"><span class="slider"></span></label></div>
+    <div class="item"><label>Nivel del Aceite Hidráulico</label><label class="switch"><input type="checkbox" checked name="aceiteHidraulico"><span class="slider"></span></label></div>
+    <div class="item"><label>Nivel del Aceite de Motor</label><label class="switch"><input type="checkbox" checked name="aceiteMotor"><span class="slider"></span></label></div>
+    <div class="item"><label>Nivel de Líquido de Frenos</label><label class="switch"><input type="checkbox" checked name="liquidoFrenos"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de Cinturón de Seguridad</label><label class="switch"><input type="checkbox" checked name="cinturon"><span class="slider"></span></label></div>
+    <div class="item"><label>Observar si existen cables eléctricos sueltos</label><label class="switch"><input type="checkbox" checked name="cablesSueltos"><span class="slider"></span></label></div>
+    <div class="item"><label>Nivel de Aceite de Transmisión</label><label class="switch"><input type="checkbox" checked name="aceiteTransmision"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de la Dirección</label><label class="switch"><input type="checkbox" checked name="direccion"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento del Claxon</label><label class="switch"><input type="checkbox" checked name="claxon"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Alarma de Reversa</label><label class="switch"><input type="checkbox" checked name="alarmaReversa"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Freno de Mano</label><label class="switch"><input type="checkbox" checked name="frenoMano"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Freno y estado de pedales</label><label class="switch"><input type="checkbox" checked name="frenoPedales"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de indicadores de tablero</label><label class="switch"><input type="checkbox" checked name="indicadores"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Mástil de Levante</label><label class="switch"><input type="checkbox" checked name="mastil"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de cadenas, conexiones y mangueras</label><label class="switch"><input type="checkbox" checked name="cadenas"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Sensor de Asiento</label><label class="switch"><input type="checkbox" checked name="sensorAsiento"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Luces Delanteras y Traseras</label><label class="switch"><input type="checkbox" checked name="luces"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Desplazador lateral</label><label class="switch"><input type="checkbox" checked name="desplazador"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de Torreta</label><label class="switch"><input type="checkbox" checked name="torreta"><span class="slider"></span></label></div>
+    <div class="item"><label>Funcionamiento de luz de Reversa</label><label class="switch"><input type="checkbox" checked name="luzReversa"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de los Espejos</label><label class="switch"><input type="checkbox" checked name="espejos"><span class="slider"></span></label></div>
+    <div class="item"><label>Extintor (con cargas, seguro y base)</label><label class="switch"><input type="checkbox" checked name="extintor"><span class="slider"></span></label></div>
+    <div class="item"><label>Nivel de Gas en el Tanque de Gas LP</label><label class="switch"><input type="checkbox" checked name="gasLP"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de la Batería</label><label class="switch"><input type="checkbox" checked name="bateria"><span class="slider"></span></label></div>
+    <div class="item"><label>Llantas de Tracción</label><label class="switch"><input type="checkbox" checked name="llantasTraccion"><span class="slider"></span></label></div>
+    <div class="item"><label>Llantas de Dirección</label><label class="switch"><input type="checkbox" checked name="llantasDireccion"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de las horquillas</label><label class="switch"><input type="checkbox" checked name="horquillas"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de Respaldo de Carga</label><label class="switch"><input type="checkbox" checked name="respaldoCarga"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado del Radiador</label><label class="switch"><input type="checkbox" checked name="radiador"><span class="slider"></span></label></div>
+    <div class="item"><label>Estado de Asiento del Operador</label><label class="switch"><input type="checkbox" checked name="asiento"><span class="slider"></span></label></div>
+    <div class="item"><label>Golpes, rayones o mal estado de la pintura</label><label class="switch"><input type="checkbox" checked name="golpes"><span class="slider"></span></label></div>
+    <!-- FIN CHECKLIST -->
 
     <textarea name="comentarios" placeholder="Comentarios..."></textarea>
-    
     <button type="submit">Enviar</button>
   </form>
-
 </body>
 </html>
