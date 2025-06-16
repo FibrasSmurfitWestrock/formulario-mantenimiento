@@ -31,7 +31,7 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 36px;
+  width: 40px;
   height: 20px;
 }
 
@@ -44,31 +44,31 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #4CAF50; /* Verde por defecto */
-  transition: .4s;
+  inset: 0;
+  background-color: #f44336; /* Rojo por defecto */
   border-radius: 20px;
+  transition: background-color 0.3s;
 }
 
-.slider:before {
-  position: absolute;
+.slider::before {
   content: "";
+  position: absolute;
   height: 16px;
   width: 16px;
   left: 2px;
   bottom: 2px;
   background-color: white;
-  transition: .4s;
   border-radius: 50%;
-  transform: translateX(16px); /* Inicia en la derecha */
+  transition: transform 0.3s;
 }
 
-input:not(:checked) + .slider {
-  background-color: #f44336; /* Rojo si apagado */
+/* Estado activo: fondo verde y bolita a la derecha */
+input:checked + .slider {
+  background-color: #4CAF50;
 }
 
-input:not(:checked) + .slider:before {
-  transform: translateX(0); /* Se mueve totalmente a la izquierda */
+input:checked + .slider::before {
+  transform: translateX(20px);
 }
 
     textarea {
