@@ -28,7 +28,7 @@
       flex: 1;
       font-size: 15px;
     }
-    .switch {
+   .switch {
   position: relative;
   display: inline-block;
   width: 36px;
@@ -55,24 +55,22 @@
   content: "";
   height: 16px;
   width: 16px;
-  left: 2px; /* posición base */
+  left: 2px;
   bottom: 2px;
   background-color: white;
   transition: .4s;
   border-radius: 50%;
+  transform: translateX(0); /* por defecto: bolita a la izquierda */
 }
 
 input:checked + .slider {
-  background-color: #4CAF50; /* verde si activo */
+  background-color: #4CAF50; /* verde al activar */
 }
 
 input:checked + .slider:before {
   transform: translateX(16px); /* bolita a la derecha */
 }
 
-input:not(:checked) + .slider:before {
-  transform: translateX(0); /* bolita a la izquierda */
-}
 
 
     textarea {
