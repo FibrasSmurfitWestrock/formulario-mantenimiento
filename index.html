@@ -28,17 +28,12 @@
       flex: 1;
       font-size: 15px;
     }
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 36px;
-  height: 20px;
-}
 
+.switch input {
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
+  width: 54px;
   height: 24px;
 }
 
@@ -50,35 +45,34 @@
 
 .slider {
   position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   background-color: #f44336; /* rojo por defecto */
-  border-radius: 34px;
+  border-radius: 24px;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .slider::before {
-  position: absolute;
   content: "";
+  position: absolute;
   height: 20px;
   width: 20px;
-  left: 2px;
   bottom: 2px;
+  left: 2px; /* bola empieza en la izquierda */
   background-color: white;
-  transition: transform 0.3s;
   border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
 }
 
-/* Activado = verde y bolita a la derecha */
-input:checked + .slider {
+/* Estado activo = verde + bolita a la derecha */
+.switch input:checked + .slider {
   background-color: #4CAF50;
 }
 
-input:checked + .slider::before {
-  transform: translateX(26px);
+.switch input:checked + .slider::before {
+  transform: translateX(30px); /* mover exactamente a la derecha */
 }
-
-
 
 
     textarea {
