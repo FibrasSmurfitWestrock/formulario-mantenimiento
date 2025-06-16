@@ -31,13 +31,6 @@
     .switch {
   position: relative;
   display: inline-block;
-  width: 32px;
-  height: 18px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
   width: 36px;
   height: 20px;
 }
@@ -52,7 +45,7 @@
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #4CAF50; /* verde por defecto */
+  background-color: #4CAF50; /* Verde por defecto */
   transition: .4s;
   border-radius: 20px;
 }
@@ -62,20 +55,22 @@
   content: "";
   height: 16px;
   width: 16px;
-  right: 2px; /* <-- EMPIEZA EN LA DERECHA */
+  left: 2px;
   bottom: 2px;
   background-color: white;
   transition: .4s;
   border-radius: 50%;
+  transform: translateX(16px); /* Inicia en la derecha */
 }
 
 input:not(:checked) + .slider {
-  background-color: #f44336; /* rojo cuando está apagado */
+  background-color: #f44336; /* Rojo si apagado */
 }
 
 input:not(:checked) + .slider:before {
-  transform: translateX(-16px); /* <-- MOVER A LA IZQUIERDA */
+  transform: translateX(0); /* Se mueve totalmente a la izquierda */
 }
+
 
     textarea {
       width: 100%;
