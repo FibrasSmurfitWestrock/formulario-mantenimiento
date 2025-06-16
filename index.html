@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Checklist Mecánico Diario</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Checklist Montacarga/Moffett</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
@@ -18,8 +18,18 @@
       color: white;
       padding: 20px;
       text-align: center;
-      font-size: 22px;
-      font-weight: bold;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    header h2 {
+      margin: 5px 0 0 0;
+      font-size: 24px;
+      font-weight: 700;
     }
 
     .container {
@@ -113,32 +123,301 @@
 
     footer {
       text-align: center;
-      padding: 20px;
       font-size: 14px;
+      padding: 20px;
       color: #003865;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>Checklist Montacarga / Moffett</header>
+  <header>
+    <h1>Fibras Smurfit Westrock</h1>
+    <h2>Checklist Montacarga / Moffett</h2>
+  </header>
   <div class="container">
     <form id="checklist-form">
-      <!-- Aquí van tus 35 items, idénticos al código que ya tienes -->
-      <!-- Solo muestro uno como ejemplo para no repetir todo -->
-      <div class="item">
-        <label>Fugas de Gas</label>
-        <label class="switch">
-          <input type="checkbox" checked name="campo1">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <!-- ... pega aquí los 34 ítems restantes ... -->
-
-      <textarea name="comentarios" placeholder="Comentarios..."></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-  <footer>Fibras Smurfit WestRock</footer>
+          <div class="item">
+      <label>Fugas de Gas</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo1">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Fugas de Aceite</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo2">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Mangueras y Abrazaderas del Tanque de Gas</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo3">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de la llave de Máximo Llenado</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo4">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel del Anticongelante</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo5">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel del Aceite Hidráulico</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo6">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel del Aceite de Motor</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo7">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel de Líquido de Frenos</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo8">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de Cinturón de Seguridad</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo9">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Observar si existen cables eléctricos sueltos</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo10">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel de Aceite de Transmisión</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo11">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de la Dirección</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo12">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento del Claxon</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo13">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Alarma de Reversa</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo14">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Freno de Mano</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo15">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Freno y estado de pedales</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo16">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de indicadores de tablero</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo17">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Mástil de Levante</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo18">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de cadenas, conexiones y mangueras</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo19">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Sensor de Asiento</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo20">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Luces Delanteras y Traseras</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo21">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Desplazador lateral(tercera palanca)</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo22">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Torreta</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo23">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de luz de Reversa</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo24">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de los Espejos</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo25">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Extintor (con cargas, seguro y estado de la base)</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo26">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel de Gas en el Tanque de Gas LP</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo27">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de la Batería</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo28">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Llantas de Tracción</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo29">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Llantas de Dirección</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo30">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de las horquillas(Tengan seguros, no dobladas y sin fisuras)</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo31">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de Respaldo de Carga</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo32">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado del Radiador</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo33">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de Asiento del Operador</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo34">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Golpes, Rayones o Mal estado de la Pintura</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo35">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <textarea name="comentarios" placeholder="Comentarios..."></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 </body>
 </html>
