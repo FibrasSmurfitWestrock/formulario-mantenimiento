@@ -31,8 +31,8 @@
     .switch {
   position: relative;
   display: inline-block;
-  width: 36px;
-  height: 20px;
+  width: 34px;
+  height: 18px;
 }
 
 .switch input {
@@ -44,8 +44,11 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #4CAF50; /* Verde por defecto */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4CAF50;
   transition: .4s;
   border-radius: 20px;
 }
@@ -53,24 +56,23 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
   left: 2px;
   bottom: 2px;
   background-color: white;
   transition: .4s;
   border-radius: 50%;
-  transform: translateX(16px); /* Inicia en la derecha */
+  transform: translateX(16px); /* Empieza al borde derecho */
 }
 
 input:not(:checked) + .slider {
-  background-color: #f44336; /* Rojo si apagado */
+  background-color: #f44336; /* Rojo al apagar */
 }
 
 input:not(:checked) + .slider:before {
-  transform: translateX(0); /* Se mueve totalmente a la izquierda */
+  transform: translateX(0); /* Se va completamente a la izquierda */
 }
-
 
     textarea {
       width: 100%;
