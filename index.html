@@ -44,35 +44,41 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: #4CAF50; /* verde por defecto */
-  transition: .4s;
+  transition: background-color 0.4s;
   border-radius: 20px;
 }
 
-.slider:before {
-  position: absolute;
+.slider::before {
   content: "";
+  position: absolute;
   height: 16px;
   width: 16px;
-  left: 2px;
-  bottom: 2px;
   background-color: white;
-  transition: .4s;
   border-radius: 50%;
-  transform: translateX(16px); /* Inicia en la derecha */
+  bottom: 2px;
+  left: 2px;
+  transition: transform 0.4s;
+  transform: translateX(0); /* bola al inicio (izquierda) */
 }
 
-input:not(:checked) + .slider {
-  background-color: #f44336; /* Rojo cuando apagado */
+/* CUANDO EL SWITCH ESTÁ ACTIVADO */
+.switch input:checked + .slider {
+  background-color: #4CAF50; /* fondo verde */
+}
+.switch input:checked + .slider::before {
+  transform: translateX(16px); /* bolita se mueve a la derecha */
 }
 
-input:not(:checked) + .slider:before {
-  transform: translateX(0); /* Mover bolita a la izquierda */
+/* CUANDO EL SWITCH ESTÁ DESACTIVADO */
+.switch input:not(:checked) + .slider {
+  background-color: #f44336; /* fondo rojo */
 }
+.switch input:not(:checked) + .slider::before {
+  transform: translateX(0); /* bolita regresa a la izquierda */
+}
+
 
     textarea {
       width: 100%;
