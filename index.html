@@ -29,12 +29,11 @@
       font-size: 15px;
     }
 
-.switch input {
 .switch {
   position: relative;
   display: inline-block;
-  width: 54px;
-  height: 24px;
+  width: 280px; /* el ancho que tú estás usando, ajustable */
+  height: 28px;
 }
 
 .switch input {
@@ -47,7 +46,7 @@
   position: absolute;
   inset: 0;
   background-color: #f44336; /* rojo por defecto */
-  border-radius: 24px;
+  border-radius: 34px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -55,25 +54,23 @@
 .slider::before {
   content: "";
   position: absolute;
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   bottom: 2px;
-  left: 2px; /* bola empieza en la izquierda */
+  left: 4px; /* INICIA EN ROJO */
   background-color: white;
   border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(0);
+  transition: left 0.3s ease;
 }
 
-/* Estado activo = verde + bolita a la derecha */
+/* Estado activo (verde) */
 .switch input:checked + .slider {
   background-color: #4CAF50;
 }
 
 .switch input:checked + .slider::before {
-  transform: translateX(30px); /* mover exactamente a la derecha */
+  left: 238px; /* BOLITA A LA DERECHA */
 }
-
 
     textarea {
       width: 100%;
