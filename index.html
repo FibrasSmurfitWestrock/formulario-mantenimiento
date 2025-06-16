@@ -31,7 +31,7 @@
    .switch {
   position: relative;
   display: inline-block;
-  width: 20px;
+  width: 36px;
   height: 20px;
 }
 
@@ -44,7 +44,10 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #f44336; /* rojo por defecto */
   transition: .4s;
   border-radius: 20px;
@@ -60,7 +63,7 @@
   background-color: white;
   transition: .4s;
   border-radius: 50%;
-  transform: translateX(0); /* por defecto: bolita a la izquierda */
+  transform: translateX(0); /* posición inicial (izquierda) */
 }
 
 input:checked + .slider {
@@ -68,10 +71,8 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(16px); /* bolita a la derecha */
+  transform: translateX(16px); /* mueve bolita a la derecha */
 }
-
-
 
     textarea {
       width: 100%;
