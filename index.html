@@ -28,7 +28,7 @@
       flex: 1;
       font-size: 15px;
     }
- .switch {
+.switch {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -60,18 +60,25 @@
   left: 4px;
   background-color: white;
   border-radius: 50%;
-  transition: transform 0.3s ease;
-  transform: translateX(0);
+  transition: left 0.3s ease;
 }
 
-/* Cambiar a verde cuando está activo */
+/* 🔴 Color rojo apagado */
+input:not(:checked) + .slider {
+  background-color: #f44336;
+}
+
+input:not(:checked) + .slider::before {
+  left: 4px;
+}
+
+/* ✅ Color verde encendido y bolita a la derecha dinámica */
 input:checked + .slider {
   background-color: #4CAF50;
 }
 
-/* Mover la bolita con respecto al ancho total del switch */
 input:checked + .slider::before {
-  transform: translateX(calc(100% + 107px));
+  left: calc(100% - 26px); /* 22px bola + 4px margen */
 }
 
 
