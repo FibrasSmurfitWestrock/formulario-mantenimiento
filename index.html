@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist Mecánico Diario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    label {
+      flex: 1;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #4CAF50;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 19px; width: 19px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #f44336;
+    }
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 20px;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Checklist Mecánico Diario</h1>
+
+  <form id="checklist-form">
+    <div class="item">
+      <label for="fugasGas">Fugas de Gas</label>
+      <label class="switch">
+        <input type="checkbox" id="fugasGas" name="fugasGas">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="item">
+      <label for="fugasAceite">Fugas de Aceite</label>
+      <label class="switch">
+        <input type="checkbox" id="fugasAceite" name="fugasAceite">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="item">
+      <label for="mangueras">Mangueras y Abrazaderas del Tanque de Gas</label>
+      <label class="switch">
+        <input type="checkbox" id="mangueras" name="mangueras">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <textarea name="comentarios" placeholder="Comentarios..."></textarea>
+    
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
