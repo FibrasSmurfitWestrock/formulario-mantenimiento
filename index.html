@@ -29,43 +29,52 @@
       flex: 1;
       font-size: 15px;
     }
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 280px
-      height: 28px;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: absolute;
-      inset: 0;
-      background-color: #f44336;
-      border-radius: 34px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .slider::before {
-      content: "";
-      position: absolute;
-      height: 24px;
-      width: 24px;
-      bottom: 2px;
-      left: 4px;
-      background-color: white;
-      border-radius: 50%;
-      transition: left 0.3s ease;
-    }
-    input:checked + .slider {
-      background-color: #4CAF50;
-    }
-    input:checked + .slider::before {
-      left: calc(100%- 26px);
-    }
+   
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: #f44336;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 2px;
+  left: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+/* VERDE (checked) */
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(248px); /* 280px - 24px - 8px margin total */
+}
+
     textarea {
       width: 100%;
       height: 100px;
