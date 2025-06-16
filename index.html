@@ -28,11 +28,11 @@
       flex: 1;
       font-size: 15px;
     }
-   
-.switch {
+ .switch {
   position: relative;
   display: inline-block;
-  width: 80px;      /* Tamaño fijo que asegura que se vea igual en todos los dispositivos */
+  width: 100%;
+  max-width: 280px;
   height: 28px;
 }
 
@@ -45,7 +45,7 @@
 .slider {
   position: absolute;
   inset: 0;
-  background-color: #f44336; /* rojo por defecto */
+  background-color: #f44336;
   border-radius: 34px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -64,13 +64,14 @@
   transform: translateX(0);
 }
 
-/* Estado activo (verde) */
+/* Cambiar a verde cuando está activo */
 input:checked + .slider {
   background-color: #4CAF50;
 }
 
+/* Mover la bolita con respecto al ancho total del switch */
 input:checked + .slider::before {
-  transform: translateX(48px); /* Mueve la bolita a la derecha dentro de 80px */
+  transform: translateX(calc(100% - 26px));
 }
 
 
