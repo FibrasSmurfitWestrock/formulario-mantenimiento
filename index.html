@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700&display=swap');
-
     body {
       font-family: 'IBM Plex Sans', Arial, sans-serif;
       margin: 0;
@@ -45,6 +44,28 @@
       background: white;
       border-radius: 10px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .field {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 10px 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .field label {
+      flex: 1;
+      font-size: 15px;
+    }
+
+    .field input {
+      flex: 2;
+      font-size: 15px;
+      padding: 6px;
     }
 
     label {
@@ -136,6 +157,17 @@
   </header>
   <div class="container">
     <form id="checklist-form">
+      <div class="field">
+        <label for="operador">Operador</label>
+        <input type="text" id="operador" name="operador" required>
+      </div>
+
+      <div class="field">
+        <label for="serie">Número de Serie</label>
+        <input type="text" id="serie" name="serie" required>
+      </div>
+
+      
           <div class="item">
       <label>Fugas de Gas</label>
       <label class="switch">
