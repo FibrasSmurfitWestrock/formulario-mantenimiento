@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700&display=swap');
+
     body {
       font-family: 'IBM Plex Sans', Arial, sans-serif;
       margin: 0;
@@ -44,28 +45,6 @@
       background: white;
       border-radius: 10px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .field {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      padding: 10px 15px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .field label {
-      flex: 1;
-      font-size: 15px;
-    }
-
-    .field input {
-      flex: 2;
-      font-size: 15px;
-      padding: 6px;
     }
 
     label {
@@ -157,439 +136,288 @@
   </header>
   <div class="container">
     <form id="checklist-form">
-      <div class="field">
-        <label for="operador">Operador</label>
-        <input type="text" id="operador" name="operador" required>
-      </div>
-
-      <div class="field">
-        <label for="serie">Número de Serie</label>
-        <input type="text" id="serie" name="serie" required>
-      </div>
-
-<div class="item">
-  <label>Fugas de Gas</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo1">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Fugas de Aceite</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo2">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Mangueras y Abrazaderas del Tanque de Gas</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo3">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de la llave de Máximo Llenado</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo4">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Nivel del Anticongelante</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo5">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Nivel del Aceite Hidráulico</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo6">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Nivel del Aceite de Motor</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo7">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Nivel de Líquido de Frenos</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo8">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de Cinturón de Seguridad</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo9">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Observar si existen cables eléctricos sueltos</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo10">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Nivel de Aceite de Transmisión</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo11">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de la Dirección</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo12">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento del Claxon</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo13">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Alarma de Reversa</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo14">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Freno de Mano</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo15">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Freno y estado de pedales</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo16">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de indicadores de tablero</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo17">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Mástil de Levante</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo18">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de cadenas, conexiones y mangueras</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo19">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Sensor de Asiento</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo20">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Luces Delanteras y Traseras</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo21">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Desplazador lateral(tercera palanca)</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo22">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de Torreta</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo23">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Funcionamiento de luz de Reversa</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo24">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de los Espejos</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo25">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Extintor (con cargas, seguro y estado de la base)</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo26">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Nivel de Gas en el Tanque de Gas LP</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo27">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de la Batería</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo28">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Llantas de Tracción</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo29">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Llantas de Dirección</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo30">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de las horquillas(Tengan seguros, no dobladas y sin fisuras)</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo31">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de Respaldo de Carga</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo32">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado del Radiador</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo33">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Estado de Asiento del Operador</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo34">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-<div class="item">
-  <label>Golpes, Rayones o Mal estado de la Pintura</label>
-  <div class="switch-container">
-    <span class="switch-label">Mal</span>
-    <label class="switch">
-      <input type="checkbox" checked name="campo35">
-      <span class="slider"></span>
-    </label>
-    <span class="switch-label">Bien</span>
-  </div>
-</div>
-
-      <textarea name="comentarios" placeholder="Comentarios..."></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
+          <div class="item">
+      <label>Fugas de Gas</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo1">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Fugas de Aceite</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo2">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Mangueras y Abrazaderas del Tanque de Gas</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo3">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de la llave de Máximo Llenado</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo4">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel del Anticongelante</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo5">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel del Aceite Hidráulico</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo6">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel del Aceite de Motor</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo7">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel de Líquido de Frenos</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo8">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de Cinturón de Seguridad</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo9">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Observar si existen cables eléctricos sueltos</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo10">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel de Aceite de Transmisión</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo11">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de la Dirección</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo12">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento del Claxon</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo13">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Alarma de Reversa</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo14">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Freno de Mano</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo15">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Freno y estado de pedales</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo16">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de indicadores de tablero</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo17">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Mástil de Levante</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo18">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de cadenas, conexiones y mangueras</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo19">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Sensor de Asiento</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo20">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Luces Delanteras y Traseras</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo21">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Desplazador lateral(tercera palanca)</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo22">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de Torreta</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo23">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Funcionamiento de luz de Reversa</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo24">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de los Espejos</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo25">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Extintor (con cargas, seguro y estado de la base)</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo26">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Nivel de Gas en el Tanque de Gas LP</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo27">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de la Batería</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo28">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Llantas de Tracción</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo29">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Llantas de Dirección</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo30">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de las horquillas(Tengan seguros, no dobladas y sin fisuras)</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo31">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de Respaldo de Carga</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo32">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado del Radiador</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo33">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Estado de Asiento del Operador</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo34">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="item">
+      <label>Golpes, Rayones o Mal estado de la Pintura</label>
+      <label class="switch">
+        <input type="checkbox" checked name="campo35">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <textarea name="comentarios" placeholder="Comentarios..."></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 </body>
 </html>
