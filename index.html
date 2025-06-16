@@ -63,7 +63,7 @@
   transition: left 0.3s ease;
 }
 
-/* 🔴 Color rojo apagado */
+/* ROJO por defecto */
 input:not(:checked) + .slider {
   background-color: #f44336;
 }
@@ -72,15 +72,14 @@ input:not(:checked) + .slider::before {
   left: 4px;
 }
 
-/* ✅ Color verde encendido y bolita a la derecha dinámica */
+/* VERDE: mover la bolita al extremo derecho real */
 input:checked + .slider {
   background-color: #4CAF50;
 }
 
 input:checked + .slider::before {
-  left: calc(100% - 26px); /* 22px bola + 4px margen */
+  left: calc(100% - 26px); /* 22px (bola) + 4px (margen) */
 }
-
 
     textarea {
       width: 100%;
