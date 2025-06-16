@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,7 +32,8 @@
     .switch {
       position: relative;
       display: inline-block;
-      width: 100px;
+      width: 100%;
+      max-width: 280px
       height: 28px;
     }
     .switch input {
@@ -62,7 +64,7 @@
       background-color: #4CAF50;
     }
     input:checked + .slider::before {
-      left: 40px;
+      left: calc(100%- 28px);
     }
     textarea {
       width: 100%;
